@@ -4,7 +4,7 @@ A native Android audio player built with React Native, demonstrating **cross-lan
 
 ## Why This Project Matters
 
-This isn't just another React Native app—it showcases **native module development**, a skill needed when React Native's JavaScript layer can't access platform-specific APIs directly.
+This isn't just another React Native app. it showcases **native module development**, a skill needed when React Native's JavaScript layer can't access platform-specific APIs directly.
 
 **Key Technical Highlights:**
 - **Native Bridge Implementation** — Custom Java module exposes Android's MediaPlayer API to JavaScript
@@ -16,7 +16,7 @@ This isn't just another React Native app—it showcases **native module developm
 
 ```
 ┌───────────────────────────────────────────────────────────────┐
-│                     JAVASCRIPT / TYPESCRIPT                    │
+│                     JAVASCRIPT / TYPESCRIPT                   │
 │  ┌─────────────────────┐      ┌─────────────────────────────┐ │
 │  │ AudioPlayerScreen   │ ───► │ AudioPlayerModule.ts        │ │
 │  │ (UI & State)        │      │ (Bridge Wrapper)            │ │
@@ -28,14 +28,14 @@ This isn't just another React Native app—it showcases **native module developm
                           ═══════════════════════════════════════
                                                │
 ┌──────────────────────────────────────────────┼────────────────┐
-│                          JAVA / ANDROID                        │
+│                          JAVA / ANDROID                       │
 │  ┌──────────────────────────────┐  ┌────────────────────────┐ │
 │  │ AudioPlayerModule.java       │◄─┤ AudioPlayerPackage     │ │
 │  │ • @ReactMethod annotations   │  │ (Registers module)     │ │
 │  │ • MediaPlayer instance       │  └────────────────────────┘ │
 │  │ • Promise-based responses    │                              │
 │  └──────────────┬───────────────┘                              │
-│                 ▼                                               │
+│                 ▼                                              │
 │       ┌─────────────────────┐                                  │
 │       │ Android MediaPlayer │                                  │
 │       │ API (Native Audio)  │                                  │
